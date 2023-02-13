@@ -1,9 +1,10 @@
-const { readFile, writeFile, appendFile } = require("fs/promises");
+const { readFile, writeFile } = require("fs/promises");
 
 readFile("./names.txt")
   .then((data) => {
     let namesData = [];
     let persons = data.toString().split("\r\n");
+
     for (const person of persons) {
       namesData.push(person.split(" - "));
     }
@@ -25,7 +26,6 @@ readFile("./names.txt")
                   }
                   return name;
                 })
-                .filter((person) => person)
                 .flat()
             )
           );

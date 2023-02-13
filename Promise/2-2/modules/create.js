@@ -1,7 +1,7 @@
 const { readFilePromise, writeFilePromise } = require("./promises");
 
-async function createUser(filePath, newUserData) {
-  readFilePromise(filePath, false)
+function createUser(filePath, newUserData) {
+  readFilePromise(filePath)
     .then((data) => {
       let userData = JSON.parse(data);
 
