@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pdfkit": "^0.13.0",
+    "word-extractor": "^1.0.4"
+  }
+}
